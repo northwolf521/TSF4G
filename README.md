@@ -1,7 +1,6 @@
 The Service Framework For Game
 ==============================
-**TSF4G**
-
+项目介绍
 - TCommon 公共的定义， 以及对bscp和sip协议的处理函数。
 - TLog 日志工具, 支持写log到文件和共享内存。
 - TLogD 日志进程， 支持把共享内存中的Log存入mysql数据库。
@@ -11,12 +10,11 @@ The Service Framework For Game
 - Utils 提供实用工具， 如start-stop-daemon可以用来启动一个后台进程。
 
 项目依赖
-========
+==============================
+- 1.TLibC
+- 2.TDR
 
-- 1.[TLibC](http://github.com/randyliu/TLibC)
-- 2.[TDR](http://github.com/randyliu/TDR)
-
-安装
-====
+安装步骤
+==============================
 	make
 	make install

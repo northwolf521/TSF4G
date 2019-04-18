@@ -16,7 +16,7 @@
 
 
 
-#include "mysql.h"
+#include "mysql/mysql.h"
 
 #include <string.h>
 #include <stdio.h>

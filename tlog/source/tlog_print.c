@@ -97,7 +97,10 @@ void tlog_print(int fd, tlog_level_t level, const char* file, uint32_t line, ...
     iov[2].iov_len = TLOG_RST_COLOR_LEN;
     iov[3].iov_base = "\n";
     iov[3].iov_len = 1;
-    writev(fd, iov, 4);
+    ssize_t v = writev(fd, iov, 4);
+    if (v > 0){
+        
+    }
     fsync(fd);
 }
 

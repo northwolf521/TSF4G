@@ -51,9 +51,9 @@ void tlog_appender_rolling_file_log(tlog_appener_rolling_file_t *self, const tlo
 	}
 
 	msg_len = strlen(message->msg);
-	if(file_size + msg_len > config->max_file_size)
+	if (file_size + msg_len > config->max_file_size)
 	{
-		char file_name[TSERVER_FILE_NAME_LENGH];
+		static char file_name[TSERVER_FILE_NAME_LENGH];
 		snprintf(file_name, TSERVER_FILE_NAME_LENGH, "%s.%u", config->file_name, self->index);
 		++self->index;
 		if(self->index > config->max_backup_index)

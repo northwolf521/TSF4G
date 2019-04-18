@@ -7,8 +7,8 @@ TDR=tdr --MMD
 PREFIX?=/usr/local/tsf4g/
 SOURCES?=.
 
-CFLAGS?=-Wall -Wconversion -Wcast-qual -Wpointer-arith -Wredundant-decls -Wmissing-declarations -Werror --pipe
-
+CFLAGS?=-Wall -Wconversion -Wcast-qual -Wpointer-arith -Wredundant-decls -Wmissing-declarations --pipe
+# CFLAGS?=-Wall -Wconversion -Wcast-qual -Wpointer-arith -Wredundant-decls -Wmissing-declarations -Werror --pipe
 ifdef debug
 DEBUG_CFLAGS=-g -ggdb -DMAKE_DEBUG
 else
